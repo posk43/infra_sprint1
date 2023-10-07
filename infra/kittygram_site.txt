@@ -1,5 +1,5 @@
 IP: 158.160.12.177;
-name_taski: http://solldartaski.ddns.net/;
+name_taski: https://solldartaski.ddns.net/;
 name_kittygram: https://ashkd225.ddns.net/;
 login: posk43;
 password: Abugot43;
