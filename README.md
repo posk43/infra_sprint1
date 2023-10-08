@@ -49,10 +49,9 @@ source env/scripts/activate
 
 pip install -r requirements.txt
 
-5. В директории backend/kittygram_backend создать файл .env и прописать там ваш SECRET_KEY
 
 
-6. Выполнить миграции:
+5. Выполнить миграции:
 
 python3 manage.py migrate
 Запустить проект:
