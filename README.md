@@ -12,7 +12,9 @@ backend: Django
 frontend: React
 nginx
 gunicorn
+
 Автор проекта:
+
 Лиджиев Петр (github: posk43)
 
 Как запустить проект:
