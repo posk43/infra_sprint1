@@ -14,7 +14,9 @@ else:
 
 DEBUG = DEBUG
 
-ALLOWED_HOSTS = ['158.160.12.177', '127.0.0.1', 'localhost', 'ashkd225.ddns.net']
+allowed_hosts_env = os.environ.get('ALLOWED_HOSTS')
+
+ALLOWED_HOSTS = allowed_hosts_env.split(',')
 
 INSTALLED_APPS = [
     'django.contrib.admin',
