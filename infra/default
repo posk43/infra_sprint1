@@ -12,13 +12,11 @@ server {
         index  index.html index.htm;
         try_files $uri /index.html;
     }
-
     listen 443 ssl; # managed by Certbot
     ssl_certificate /etc/letsencrypt/live/solldartaski.ddns.net/fullchain.pem; 
     ssl_certificate_key /etc/letsencrypt/live/solldartaski.ddns.net/privkey.pem;
     include /etc/letsencrypt/options-ssl-nginx.conf; 
     ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem; 
-
 }
 
 
@@ -41,41 +39,30 @@ server {
         index  index.html index.htm;
         try_files $uri /index.html;
     }
-
-
     listen 443 ssl; # managed by Certbot
     ssl_certificate /etc/letsencrypt/live/ashkd225.ddns.net/fullchain.pem;
     ssl_certificate_key /etc/letsencrypt/live/ashkd225.ddns.net/privkey.pem;
     include /etc/letsencrypt/options-ssl-nginx.conf;
     ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem; 
-
 }
-
-
 
 
 server {
     if ($host = ashkd225.ddns.net) {
         return 301 https://$host$request_uri;
     } 
-
-
     server_name ashkd225.ddns.net;
     listen 80;
     return 404; 
-
-
 }
+
+
 server {
     if ($host = solldartaski.ddns.net) {
         return 301 https://$host$request_uri;
     } 
-
-
     listen 80;
     server_name 158.160.12.177 solldartaski.ddns.net;
     return 404;
-
-
 }
 
