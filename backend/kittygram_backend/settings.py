@@ -12,8 +12,6 @@ if debug_env and debug_env.lower() == 'true':
 else:
     DEBUG = False
 
-DEBUG = DEBUG
-
 allowed_hosts_env = os.environ.get('ALLOWED_HOSTS')
 
 ALLOWED_HOSTS = allowed_hosts_env.split(',')
